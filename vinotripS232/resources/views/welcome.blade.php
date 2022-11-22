@@ -14,7 +14,6 @@
     <script>
         var data = <?php echo json_encode($sejour);?>;
     </script>
-    <h1></h1>
     <header> 
         <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
         <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
