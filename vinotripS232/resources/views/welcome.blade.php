@@ -10,18 +10,17 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/caroussel.css">
 </head>
-<header> 
+<header>
     <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
     <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
     <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
 </header>
 <body>
-
 <div id="slider">
         <ul id="slideWrap">
             @foreach ($sejour as $unSejour)
             <li><img src="{{$unSejour['photo_sejour']}}" alt=""></li>
-            @endforeach
+            @endforeach 
         </ul>   
         <a id="prev" href="#">&#8810;</a>
         <a id="next" href="#">&#8811;</a>
