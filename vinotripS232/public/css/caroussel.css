@@ -4,8 +4,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 1500px;
-    height: 265px;
+    width: 100%;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   }
@@ -22,13 +21,11 @@
   #slider ul li {
     position: relative;
     height: 100%;
-   
     float: left;
   }
-  #slider ul li img{
-    width: 500px;
-    height: 265px;
-  }
+  /* #slider ul li img{
+    height: 100%;
+  } */
    
   #slider #prev, #slider #next {
     width: 50px;

@@ -4,7 +4,8 @@ var responsiveSlider = function() {
     var sliderWidth = slider.offsetWidth;
     var slideList = document.getElementById("slideWrap");
     var count = 1;
-    var items = slideList.querySelectorAll("li").length;
+    var items = parseInt(slideList.querySelectorAll("li").length / 2);
+    console.log(items);
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
     
@@ -23,6 +24,7 @@ var responsiveSlider = function() {
         slideList.style.left = "-" + count * sliderWidth + "px";
         count++;
       }
+      console.log(count);
     };
     
     var nextSlide = function() {
@@ -30,10 +32,11 @@ var responsiveSlider = function() {
         slideList.style.left = "-" + count * sliderWidth + "px";
         count++;
       }
-      else if(count = items) {
+      else if(count > items -1) {
         slideList.style.left = "0px";
         count = 1;
       }
+      console.log(count);
     };
     
     next.addEventListener("click", function() {
@@ -44,9 +47,9 @@ var responsiveSlider = function() {
       prevSlide();
     });
     
-    setInterval(function() {
-      nextSlide()
-    }, 5000);
+    // setInterval(function() {
+    //   nextSlide()
+    // }, 5000);
     
     };
     
@@ -54,4 +57,23 @@ var responsiveSlider = function() {
     responsiveSlider();  
     }
     
+    function create(tag, parent, text=null, classs=null, id=null) {
+      let element = document.createElement(tag)
+      if (text)
+        element.appendChild(document.createTextNode(text))
+      parent.appendChild(element)
+      if (classs)
+        element.classList.add(classs)
+      if (id)
+        element.id = id
+      return element
+    }
+
+    let ul = document.querySelector("#slideWrap");
+    data.forEach(unSejour => {
+      let li = create("li", ul, null, null, null);
+      let image = create("img", li, null, null, null);
+      image.src = unSejour.photo_sejour;
+      image.style.width = slider.clientWidth / 2 + "px";
+    });
     
