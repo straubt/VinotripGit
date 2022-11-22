@@ -47,9 +47,9 @@ var responsiveSlider = function() {
       prevSlide();
     });
     
-    // setInterval(function() {
-    //   nextSlide()
-    // }, 5000);
+    setInterval(function() {
+      nextSlide()
+    }, 5000);
     
     };
     
