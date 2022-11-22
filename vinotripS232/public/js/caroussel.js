@@ -4,7 +4,8 @@ var responsiveSlider = function() {
     var sliderWidth = slider.offsetWidth;
     var slideList = document.getElementById("slideWrap");
     var count = 1;
-    var items = slideList.querySelectorAll("li").length;
+    var items = parseInt(slideList.querySelectorAll("li").length / 2);
+    console.log(items);
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
     
@@ -31,7 +32,7 @@ var responsiveSlider = function() {
         slideList.style.left = "-" + count * sliderWidth + "px";
         count++;
       }
-      else if(count = items) {
+      else if(count > items -1) {
         slideList.style.left = "0px";
         count = 1;
       }
