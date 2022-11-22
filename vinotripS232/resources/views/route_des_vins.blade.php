@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" >
     <link rel="stylesheet" href="css/styleGeneral.css" >
+    <link rel="stylesheet" href="css/over_image.css">
 </head>
 <header>
     <a href="http://51.83.36.122:8232/" title="Vinotrip">
@@ -16,12 +17,10 @@
 
 <body> 
     @foreach ($route_des_vins as $uneRoute)
-    <div class="route_des_vins"><a class="route_a" href="{{$uneRoute['url_photo_route_des_vins']}}"> 
-        <h1>{{$uneRoute['libelle_route_des_vins']}}</h1>
-        <img src="{{$uneRoute['url_photo_route_des_vins']}}" id="image_route_vins">
-        <h2 id="text_route">{{$uneRoute['description_route_des_vins']}}</h2>
-</a>
-</div>
+    <div class="parent"><a class="route_a" href="{{$uneRoute['url_photo_route_des_vins']}}"> 
+        <div class="parent"><div class = "container" ><img src="{{$uneRoute['url_photo_route_des_vins']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$uneRoute['libelle_route_des_vins']}}<br>{{$uneRoute['description_route_des_vins']}}</div></div></div></div>
+        </a>
+    </div>
     @endforeach
 
     
