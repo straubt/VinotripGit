@@ -27,7 +27,6 @@
             <a id="next" href="#">&#8811;</a>
         </div>
         <button id="buttonSlider" onclick="location.href='nos-sejours'">Découvrir nos séjours</button>
->>>>>>> c7aeb344dd6f00db8cbe2e9d3647efcdedec1750
         <br>
 
         <section class="bandeau"> 
