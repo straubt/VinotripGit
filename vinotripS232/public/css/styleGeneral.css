@@ -63,7 +63,7 @@ a {
 
 /* pour le logo et ... */
 header {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 0px;
     height: 75px;
@@ -80,7 +80,7 @@ header {
 #registerButton{
     top: 10%;
     right: 1%;
-    position: inherit;
+    position: absolute;
     width: 150px;
     height: 25px;
     font-size: 12px;
@@ -110,7 +110,7 @@ header {
   #route_des_vins{
     top: 10%;
     right: 15%;
-    position: inherit;
+    position: absolute  ;
     width: 150px;
     height: 25px;
     font-size: 12px;
