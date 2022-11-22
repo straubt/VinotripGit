@@ -10,7 +10,7 @@
 </head>
 <body>
 <header>
-    <a href="http://51.83.36.122:8232/" title="Vinotrip">
+    <a href="/" title="Vinotrip">
         <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
     </a>
 </header>
