@@ -12,7 +12,7 @@
 </head>
 <body>
     <script>
-        var data = <?php echo json_encode($sejour);?>;
+        var data = <?php echo json_encode($sejour);?>
     </script>
     <header>
         <div id="headerImg">
