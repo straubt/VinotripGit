@@ -1,15 +1,33 @@
 
   
-  #slider {
-    position: relative;
+  .slider { /*all div for slider*/
+    display: flex;  
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   }
-  #slider ul {
-    position: relative;
+
+  #sliderUlLiImg{ /*ul, li, img slider div */
+    display: flex;
+    z-index: 3;
+  }
+
+  #sliderPrevNextBtns{ /*next and prev buttons div */
+    display: flex;
+    z-index: 3;
+    justify-content: space-between;
+  }
+
+  #sliderSejourBtn{ /*button sejour div */
+    display: flex;
+    z-index: 3;
+    justify-content: center;
+  }
+
+  .slider ul { /*ul in ul li img div != sliderUlliImg div*/
+    display: flex;
     list-style: none;
     height: 100%;
     width: 10000%;
@@ -18,16 +36,14 @@
     animation: all 750ms ease;
     left: 0;
   }
-  #slider ul li {
+
+  .slider ul li { /*li in ul li img div != sliderUlliImg div*/
     position: relative;
     height: 100%;
     float: left;
   }
-  /* #slider ul li img{
-    height: 100%;
-  } */
    
-  #slider #prev, #slider #next {
+  .slider #prev, .slider #next { /*style for prev and next buttons*/
     width: 50px;
     line-height: 50px;
     border-radius: 50%;
@@ -41,44 +57,46 @@
     transform: translateY(-50%);
     transition: all 150ms ease;
   }
-  #slider #prev:hover, #slider #next:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    text-shadow: 0;
-  }
-  #slider #prev {
+
+  .slider #prev { /*escpacement for prev end next buttons*/
     left: 10px;
   }
-  #slider #next {
+  .slider #next {
     right: 10px;
   }
 
-#buttonSlider{
+  .slider #prev:hover, .slider #next:hover { /*prev and next animation hover*/
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0;
+  }
+
+#buttonSlider{ /*button sejours style*/
     position: absolute;
     margin-top: -75px;
     margin-left: 41%;
     width: 300px;
-     height: 50px;
-      padding: 1.3em 3em;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font-weight: 500;
-      color: #000;
-      background-color: #fff;
-      border: none;
-      border-radius: 45px;
-      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease 0s;
-      cursor: pointer;
-      outline: none;
+    height: 50px;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
   }
-  #buttonSlider:hover {
+  #buttonSlider:hover { /*button sejour anims hover*/
     background-color: #970555;
     box-shadow: 0px 45px 60px #03030366;
     color: #fff;
     transform: translateY(-7px);
   }
   
-#buttonSlider:active {
+#buttonSlider:active { /*button sejour anims active*/
     transform: translateY(-1px);
   }

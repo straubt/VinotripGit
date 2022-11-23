@@ -1,6 +1,6 @@
 var responsiveSlider = function() {
 
-    var slider = document.getElementById("slider");
+    var slider = document.getElementsByClassName("slider");
     var sliderWidth = slider.offsetWidth;
     var slideList = document.getElementById("slideWrap");
     var count = 1;
@@ -68,10 +68,12 @@ var responsiveSlider = function() {
     }
 
     let ul = document.querySelector("#slideWrap");
+    let slider = document.getElementsByClassName("slider");
+    console.log(slider[0].offsetWidth);
     data.forEach(unSejour => {
       let li = create("li", ul, null, null, null);
       let image = create("img", li, null, null, null);
       image.src = unSejour.photo_sejour;
-      image.style.width = slider.clientWidth / 2 + "px";
+      image.style.width = slider[0].clientWidth / 2 + "px";
     });
     
