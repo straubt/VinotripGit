@@ -30,7 +30,6 @@
     <h1>{{$sejour[$id]['titre_sejour']}}</h1>
     <p>Durée : {{$sejour[$id]['duree_sejour']}} jours, {{$sejour[$id]['duree_sejour']-1}} nuits</p>
     <p>{{$sejour[$_SERVER['QUERY_STRING']-1]['description_sejour']}}</p>
-    <p>{{$categorie_participant[$sejour[$id]['id_categorie_participant']-1]['lib_categorie_participant']}}</p>
     <p>{{$theme[$sejour[$id]['id_theme']-1]['libelle_theme']}}</p>
     <p>Avis = {{$idexist}}</p>
     <p>Commentaire = {{$commentaire}}</p>
