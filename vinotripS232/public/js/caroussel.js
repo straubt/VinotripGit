@@ -5,7 +5,6 @@ var responsiveSlider = function() {
     var slideList = document.getElementById("slideWrap");
     var count = 1;
     var items = parseInt(slideList.querySelectorAll("li").length / 2);
-    console.log(items);
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
     
@@ -24,7 +23,6 @@ var responsiveSlider = function() {
         slideList.style.left = "-" + count * sliderWidth + "px";
         count++;
       }
-      console.log(count);
     };
     
     var nextSlide = function() {
@@ -36,7 +34,6 @@ var responsiveSlider = function() {
         slideList.style.left = "0px";
         count = 1;
       }
-      console.log(count);
     };
     
     next.addEventListener("click", function() {
@@ -55,6 +52,7 @@ var responsiveSlider = function() {
     
     window.onload = function() {
     responsiveSlider();  
+    
     }
     
     function create(tag, parent, text=null, classs=null, id=null) {
