@@ -13,7 +13,7 @@
     <link rel="icon" type="image/x-icon" href="images/images.jpg">
 </head>
 <header> 
-<a href="http://51.83.36.122:8232/" title="Vinotrip">
+<a href="/" title="Vinotrip">
     <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
 </a>
     <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
@@ -55,7 +55,6 @@
     <input type="submit" value="confirmer" id="buttonConfirmer">
 </form>
 
-
 <?php
 //filtres : 
 if(isset($_SERVER['QUERY_STRING'])){
@@ -63,6 +62,8 @@ if(isset($_SERVER['QUERY_STRING'])){
     { ?>
         @foreach ($sejour as $unSejour)
         <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        @if (!isset($unSejour)):
+            <a id="Erreur"> aucun resultat trouvé </a>
         @endforeach <?php 
     }
     if ($_GET['Domaine']!="none" && $_GET['Participant']=="none" && $_GET['Theme'] =="none")

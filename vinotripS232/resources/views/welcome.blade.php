@@ -15,7 +15,9 @@
         var data = <?php echo json_encode($sejour);?>;
     </script>
     <header> 
-        <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+        <a href="/" title="Vinotrip">
+            <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+        </a>
         <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
         <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
     </header>
@@ -58,21 +60,21 @@
 </body>
 
 <footer>
-        <div class="txtFooter">
-            <a href="" title="page d'accueil">
-                Page d'Acceuil
-            </a>
-            <a href="../mention legales/mention legales.html" title="Mentions legales">
-                Mentions legales
-            </a>
-            <a href="" title="Politique de Confidentialité">
-                Politique de Confidentialité
-            </a>
-        </div>
+    <div class="txtFooter">
+        <a href="" title="page d'accueil">
+            Page d'Acceuil
+        </a>
+        <a href="../mention legales/mention legales.html" title="Mentions legales">
+            Mentions legales
+        </a>
+        <a href="" title="Politique de Confidentialité">
+            Politique de Confidentialité
+        </a>
+    </div>
         
-        <div id="txtPayementSecu">Payement securisé :
-            <br><img id="payementSecu" src="images/Paiement-Securise.png" title="Paiement sécurisé">
-        </div>
+    <div id="txtPayementSecu">Payement securisé :
+        <br><img id="payementSecu" src="images/Paiement-Securise.png" title="Paiement sécurisé">
+    </div>
 </footer>
 <script src="js/caroussel.js"></script>
 </html>
