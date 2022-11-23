@@ -63,12 +63,22 @@ a {
 
 /* pour le logo et ... */
 header {
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
     top: 0%;
     height: 75px;
     text-transform: uppercase;
     background-color: whitesmoke;
+}
+
+#headerImg{
+    display: flex;
+    flex-basis: 60%;
+}
+
+#headerBtns {
+    display: flex;
 }
 
 #logoSlogan{
@@ -78,11 +88,9 @@ header {
 }
 
 #registerButton{
-    top: 10%;
-    right: 1%;
-    position: absolute;
+    margin: 5%;
     width: 150px;
-    height: 25px;
+    height: 35px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -108,11 +116,9 @@ header {
   }
 
   #route_des_vins{
-    top: 10%;
-    right: 15%;
-    position: absolute  ;
+    margin: 5%;
     width: 150px;
-    height: 25px;
+    height: 35px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
