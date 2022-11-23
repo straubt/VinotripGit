@@ -1,3 +1,4 @@
+console.log(sejour);
 (function() {
 
     var CuteSelect = CuteSelect || {};
