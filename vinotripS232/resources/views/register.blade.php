@@ -15,7 +15,7 @@
     </a>
 </header>
 
-    <!-- Body of Form starts -->
+    <!-- Body -->
   	<div class="container">
       <form method="post" autocomplete="on">
         <!--First name-->
