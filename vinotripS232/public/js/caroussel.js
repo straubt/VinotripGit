@@ -5,7 +5,6 @@ var responsiveSlider = function() {
     var slideList = document.getElementById("slideWrap");
     var count = 1;
     var items = parseInt(slideList.querySelectorAll("li").length / 2);
-    console.log(items);
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
     

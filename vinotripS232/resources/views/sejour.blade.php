@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
+    <link rel="stylesheet" href="css/styleGeneral.css"></head>
 <body> 
 <div>
 <img src="{{$sejour[$_SERVER['QUERY_STRING']-1]['photo_sejour']}}" alt="">

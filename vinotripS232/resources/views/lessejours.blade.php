@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/select.css">
     <link rel="stylesheet" href="css/over_image.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
     <link rel="stylesheet" href="css/styleGeneral.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="images/images.jpg">
