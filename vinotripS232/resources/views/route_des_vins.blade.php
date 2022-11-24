@@ -21,13 +21,10 @@
     <h1>Route des Vins</h1>
     <img id="carte" src="images/carte.png">
     <?php for ($i = 1; $i<count($route_des_vins)-1; $i++) {?>
-    <div class="parent"><a class="route_a" href="{{$route_des_vins[$i]['url_photo_route_des_vins']}}"> 
-        <img class="localisation" src="images/localisation.png">
-        <div class="parent"><div class = "container" ><img src="{{$route_des_vins[$i]['url_photo_route_des_vins']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$route_des_vins[$i]['libelle_route_des_vins']}}<br>{{$route_des_vins[$i]['description_route_des_vins']}}</div></div></div></div>
-        </a>
-    </div>
+    <img class="localisation" onclick="uneRoute()"  id="localisation_{{$i}}" src="images/localisation.png">
+        <!-- <div class="parent"><div class = "container" ><img src="{{$route_des_vins[$i]['url_photo_route_des_vins']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$route_des_vins[$i]['libelle_route_des_vins']}}<br>{{$route_des_vins[$i]['description_route_des_vins']}}</div></div></div></div> -->
+    <!-- </div> -->
     <?php } ?>
-
-    
 </body>
+<script src="js/SpawnRoute.js">var routes = <?php echo json_encode($route_des_vins)?>;</script>
 </html>
