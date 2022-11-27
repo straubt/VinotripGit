@@ -1,29 +1,30 @@
 
   
   .slider { /*all div for slider*/
-    display: flex;  
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   }
 
   #sliderUlLiImg{ /*ul, li, img slider div */
     display: flex;
-    z-index: 3;
   }
 
   #sliderPrevNextBtns{ /*next and prev buttons div */
-    display: flex;
-    z-index: 3;
-    justify-content: space-between;
+    position: relative;
+    top: -150px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
   }
 
-  #sliderSejourBtn{ /*button sejour div */
-    display: flex;
-    z-index: 3;
-    justify-content: center;
+  #sliderSejoursBtn{ /*button sejour div */
+    position: relative;
+    text-align: center;
+    top: -110px;
   }
 
   .slider ul { /*ul in ul li img div != sliderUlliImg div*/
@@ -38,7 +39,7 @@
   }
 
   .slider ul li { /*li in ul li img div != sliderUlliImg div*/
-    position: relative;
+    display: flex;
     height: 100%;
     float: left;
   }
@@ -52,17 +53,16 @@
     text-align: center;
     color: white;
     text-decoration: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     transition: all 150ms ease;
   }
 
   .slider #prev { /*escpacement for prev end next buttons*/
     left: 10px;
+    float: left;
   }
   .slider #next {
     right: 10px;
+    float: right;
   }
 
   .slider #prev:hover, .slider #next:hover { /*prev and next animation hover*/
@@ -71,12 +71,9 @@
   }
 
 #buttonSlider{ /*button sejours style*/
-    position: absolute;
-    margin-top: -75px;
-    margin-left: 41%;
+    justify-content: center;
     width: 300px;
     height: 50px;
-    padding: 1.3em 3em;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
