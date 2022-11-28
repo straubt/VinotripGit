@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Vinotrip</title> 
     <link rel="stylesheet" href="css/register.css">
-    <link rel="stylesheet" href="css/styleGeneral.css">
-</head>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
+    <link rel="stylesheet" href="css/styleGeneral.css"></head>
 <body>
+
 
 <header> 
         <div id="headerButton">
@@ -20,11 +21,12 @@
         </div>
 </header>
     <!-- Body of Form starts -->
+
   	<div class="container">
       <form method="post" autocomplete="on">
         <!--First name-->
     		<div class="box">
-          <label for="firstName" class="fl fontLabel"> Nom : </label>
+          <label for="firstName" class="fl fontLabel"> ffv : </label>
     			<div class="new iconBox">
             <i class="fa fa-user" aria-hidden="true"></i>
           </div>

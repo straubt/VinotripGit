@@ -7,19 +7,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/select.css">
     <link rel="stylesheet" href="css/over_image.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
     <link rel="stylesheet" href="css/styleGeneral.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <link rel="icon" type="image/x-icon" href="images/images.jpg">
 </head>
 <header> 
-        <div id="headerButton">
-            <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
-            <a href="/" title="Vinotrip">
-                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-            </a>
-            <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
-        </div>
-</header>
+        <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+        <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+       @guest <button id="loginButton" onclick="location.href='login'">Se Connecter</button>
+        <button id="registerButton" onclick="location.href='register'">S'inscrire</button> @endguest
+        @auth <button id="registerButton" onclick="location.href='logout'">Se déconnecter</button> @endauth
+</header><br><br><br><br>
 <body> 
     <script>
         var sejour = <?php echo json_encode($sejour);?>;
@@ -79,6 +80,8 @@
         <option value="Provence">Provence</option>
         <option value="Catalogne">Catalogne</option>
         <option value="Jura">Jura</option>
+        <option value="Corse">Corse</option>
+        <option value="Savoie">Savoie</option>
     </select>
     <select name="Participant" id="selector">
         <option value={{$selectparticipant}}>{{$textParticipant}}</option>
@@ -118,7 +121,7 @@ if(isset($_SERVER['QUERY_STRING'])){
         @foreach ($destination as $uneDestination)
         <?php if($uneDestination['libelle_destination'] == strtoupper($_GET['Domaine']) && $uneDestination['id_destination'] == $unSejour['id_destination']) { 
         ?>
-        <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        <div class="parent"><div class = "container" data-aos="fade-up"><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
         <?php  } ?>
         @endforeach
         @endforeach  
@@ -135,8 +138,10 @@ if(isset($_SERVER['QUERY_STRING'])){
             if($uneCatToPart['id_categorie_participant'] == $uneCategorie['id_categorie_participant'] && $uneCatToPart['id_sejour'] == $unSejour['id_sejour']) 
             { 
         ?>
-        <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
-        <?php  }} ?>
+
+        <div class="parent"><div class = "container" data-aos="fade-up"><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        <?php  } ?>
+
         @endforeach
         @endforeach  
         @endforeach  
@@ -149,8 +154,10 @@ if(isset($_SERVER['QUERY_STRING'])){
         @foreach ($theme as $unTheme)
         <?php if($unTheme['libelle_theme'] == strtoupper($_GET['Theme']) && $unTheme['id_theme'] == $unSejour['id_theme']) { 
         ?>
-        <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
-        <?php  }?>
+        
+        <div class="parent"><div class = "container" data-aos="fade-up"><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        <?php  } ?>
+
         @endforeach
         @endforeach  
         <?php
@@ -169,8 +176,10 @@ if(isset($_SERVER['QUERY_STRING'])){
                 if($uneCatToPart['id_categorie_participant'] == $uneCategorie['id_categorie_participant'] && $uneCatToPart['id_sejour'] == $unSejour['id_sejour']) 
                 {
         ?>
-        <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
-        <?php  } }}?>
+
+        <div class="parent"><div class = "container" data-aos="fade-up"><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        <?php  } }?>
+
         @endforeach
         @endforeach  
         @endforeach
@@ -186,7 +195,7 @@ if(isset($_SERVER['QUERY_STRING'])){
         <?php if($uneDestination['libelle_destination'] == strtoupper($_GET['Domaine']) && $uneDestination['id_destination'] == $unSejour['id_destination']) { 
             if($unTheme['libelle_theme'] == strtoupper($_GET['Theme']) && $unTheme['id_theme'] == $unSejour['id_theme']) { 
             ?>
-        <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        <div class="parent"><div class = "container" data-aos="fade-up"><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
         <?php  } }?>
         @endforeach
         @endforeach  
@@ -207,8 +216,10 @@ if(isset($_SERVER['QUERY_STRING'])){
             {
             if($unTheme['libelle_theme'] == strtoupper($_GET['Theme']) && $unTheme['id_theme'] == $unSejour['id_theme']) { 
             ?>
-        <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
-        <?php  } }}?>
+
+        <div class="parent"><div class = "container" data-aos="fade-up"><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        <?php  } }?>
+
         @endforeach
         @endforeach  
         @endforeach
@@ -229,8 +240,10 @@ if(isset($_SERVER['QUERY_STRING'])){
              { 
             if($unTheme['libelle_theme'] == strtoupper($_GET['Theme']) && $unTheme['id_theme'] == $unSejour['id_theme']) { 
             ?>
-        <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
-        <?php  }} }?>
+
+        <div class="parent"><div class = "container" data-aos="fade-up"><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        <?php  } }?>
+
         @endforeach
         @endforeach  
         @endforeach
@@ -254,8 +267,10 @@ if(isset($_SERVER['QUERY_STRING'])){
         if($unTheme['libelle_theme'] == strtoupper($_GET['Theme']) && $unTheme['id_theme'] == $unSejour['id_theme']) 
         { 
             ?>
-        <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
-        <?php  }}}}?>
+
+        <div class="parent"><div data-aos="fade-up" class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+        <?php  }} }?>
+
         @endforeach
         @endforeach  
         @endforeach
@@ -271,7 +286,7 @@ else
 {
     ?>
     @foreach ($sejour as $unSejour)
-    <div class="parent"><div class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
+    <div  class="parent"><div data-aos="fade-up" class = "container" ><a href="/sejour?{{$unSejour['id_sejour']}}"><img src="{{$unSejour['photo_sejour']}}" alt=""  class="image"><div class = "overlay"><div class = "texte">{{$unSejour['titre_sejour']}}<br>{{$unSejour['prix_min_individuel_sejour']}}€ Par Pers.</div></div></a></div></div>
     @endforeach 
     <?php
 
@@ -281,6 +296,9 @@ else
 ?>
 
     
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
 

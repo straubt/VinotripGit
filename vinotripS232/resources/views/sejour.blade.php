@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<header> 
-        <div id="headerButton">
-            <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
-            <a href="/" title="Vinotrip">
-                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-            </a>
-            <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
-        </div>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js%22%3E"></script>
+    <link rel="stylesheet" href="css/styleGeneral.css"></head>
+    <header> 
+    <a href="/"><img id="logoSlogan" src="images/logo + slogan vinotrip.PNG"></a>
+        <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+       @guest <button id="loginButton" onclick="location.href='login'">Se Connecter</button>
+        <button id="registerButton" onclick="location.href='register'">S'inscrire</button> @endguest
+        @auth <button id="registerButton" onclick="location.href='logout'">Se déconnecter</button> @endauth
+
     </header>
 <body> 
 <div>
@@ -44,6 +47,8 @@
     <p>Commentaire = {{$commentaire}}</p>
 </div>
 
-    
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

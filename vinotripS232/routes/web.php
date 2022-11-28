@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,19 +14,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-use App\Http\Controllers\IndexController;
-
 Route::get("/nos-sejours", [IndexController::class, "destination"]);
 Route::get("/nos-sejours", [IndexController::class, "categorie_participant"]);
 Route::get("/nos-sejours", [IndexController::class, "sejour"]);
 Route::get("/", [IndexController::class, "index"]);
-Route::get("/client", [IndexController::class, 'client']);
-Route::get("/register", [IndexController::class, 'register']);
-Route::post("/register", [IndexController::class, 'register']);
 Route::get("/sejour", [IndexController::class, 'unSejour']);
 Route::get("/route-des-vins", [IndexController::class, 'route_des_vins']);
 
+// ->middleware(['auth', 'verified'])->name('index');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
+Route::get('/dashboard', function(){
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

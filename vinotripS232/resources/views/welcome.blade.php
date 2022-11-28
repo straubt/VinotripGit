@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil vinotrip Main</title>
     <link rel="icon" type="image/x-icon" href="images/images.jpg">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
     <link rel="stylesheet" href="css/styleGeneral.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/caroussel.css">
@@ -17,14 +18,16 @@
         var data = <?php echo json_encode($sejour);?>
     </script>
     <header> 
-        <div id="headerButton">
-            <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
-            <a href="/" title="Vinotrip">
-                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-            </a>
-            <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
-        </div>
-    </header>
+
+    <a href="/"><img id="logoPanier" src="images/panier.png"></a>
+    <a href="/"><img id="logoSlogan" src="images/logo + slogan vinotrip.PNG"></a>
+        <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+       @guest <button id="loginButton" onclick="location.href='login'">Se Connecter</button>
+        <button id="registerButton" onclick="location.href='register'">S'inscrire</button> @endguest
+        @auth <button id="loginButton" onclick="location.href='profile'">Mon profil</button>
+         <button id="registerButton" onclick="location.href='logout'">Se déconnecter</button> @endauth
+    </header>   
+
 
     <div class="owl-carousel">
     </div>
