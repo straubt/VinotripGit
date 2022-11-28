@@ -17,8 +17,7 @@
             </a>
             <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
         </div>
-    </header>
-
+</header>
 <body> 
     @foreach ($route_des_vins as $uneRoute)
     <div class="parent"><a class="route_a" href="{{$uneRoute['url_photo_route_des_vins']}}"> 

@@ -12,7 +12,7 @@
 </head>
 <body>
     <script>
-        var data = <?php echo json_encode($sejour);?>;
+        var data = <?php echo json_encode($sejour);?>
     </script>
     <header> 
         <div id="headerButton">
@@ -29,9 +29,9 @@
             </ul>
             <a id="prev" href="#">&#8810;</a>
             <a id="next" href="#">&#8811;</a>
+            <button id="buttonSlider" onclick="location.href='nos-sejours'">Découvrir nos séjours</button>
         </div>
-        <button id="buttonSlider" onclick="location.href='nos-sejours'">Découvrir nos séjours</button>
-        <br>
+        
 
         <section class="bandeau"> 
             <br>

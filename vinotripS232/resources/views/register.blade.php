@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styleGeneral.css">
 </head>
 <body>
+
 <header> 
         <div id="headerButton">
             <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
@@ -17,8 +18,7 @@
             </a>
             <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
         </div>
-    </header>
-
+</header>
     <!-- Body of Form starts -->
   	<div class="container">
       <form method="post" autocomplete="on">
