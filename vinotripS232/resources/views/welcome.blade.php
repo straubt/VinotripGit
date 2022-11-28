@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil vinotrip Titouan branch</title>
+    <title>Accueil vinotrip Main</title>
     <link rel="icon" type="image/x-icon" href="images/images.jpg">
     <link rel="stylesheet" href="css/styleGeneral.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,12 +16,12 @@
     <script>
         var data = <?php echo json_encode($sejour);?>
     </script>
-    <header>
-        <div id="headerImg">
-            <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-        </div>
-        <div id="headerBtns">
+    <header> 
+        <div id="headerButton">
             <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+            <a href="/" title="Vinotrip">
+                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+            </a>
             <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
         </div>
     </header>
@@ -63,14 +63,13 @@
         <a href="" title="page d'accueil">
             Page d'Acceuil
         </a>
-        <a href="../mention legales/mention legales.html" title="Mentions legales">
+        <a href="" title="Mentions legales">
             Mentions legales
         </a>
         <a href="" title="Politique de Confidentialité">
             Politique de Confidentialité
         </a>
     </div>
-    
     <div id="txtPayementSecu">Payement securisé :
         <br><img id="payementSecu" src="images/Paiement-Securise.png" title="Paiement sécurisé">
     </div>

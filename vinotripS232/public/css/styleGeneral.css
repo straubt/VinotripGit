@@ -2,7 +2,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: "time new roman";
+    font-family: "Montserrat";
 }
 
 /* pour que le body prenne toute la place */
@@ -63,32 +63,27 @@ a {
 
 /* pour le logo et ... */
 header {
-    display: flex;
-    justify-content: flex-end;
     width: 100%;
-    top: 0%;
     height: 75px;
     text-transform: uppercase;
     background-color: whitesmoke;
 }
 
-#headerImg{
+#headerButton{
+
     display: flex;
-    flex-basis: 60%;
+    justify-content: space-around;
+    position: inherit;
+    top:30%;
 }
 
-#headerBtns {
-    display: flex;
-}
 
 #logoSlogan{
-    display: flex;
-    justify-content: center;
-    margin: auto;
+    margin-top: 0%;
 }
 
-#registerButton{
-    margin: 5%;
+#registerButton{ 
+    margin-top: 20px;
     width: 150px;
     height: 35px;
     font-size: 12px;
@@ -100,7 +95,7 @@ header {
     border: none;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease   0s;
+    transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
 }
@@ -115,8 +110,8 @@ header {
     transform: translateY(-1px);
   }
 
-  #route_des_vins{
-    margin: 5%;
+#route_des_vins{
+    margin-top: 20px;
     width: 150px;
     height: 35px;
     font-size: 12px;
@@ -169,5 +164,3 @@ footer {
     float: right;
     padding-bottom: 30px;
 }
-
-
