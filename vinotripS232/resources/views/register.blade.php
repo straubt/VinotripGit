@@ -20,7 +20,7 @@
       <form method="post" autocomplete="on">
         <!--First name-->
     		<div class="box">
-          <label for="firstName" class="fl fontLabel"> Nom : </label>
+          <label for="firstName" class="fl fontLabel"> ffv : </label>
     			<div class="new iconBox">
             <i class="fa fa-user" aria-hidden="true"></i>
           </div>

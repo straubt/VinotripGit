@@ -11,20 +11,30 @@
     <link rel="stylesheet" href="css/over_image.css">
     <link rel="stylesheet" href="css/carte.css">
 </head>
-<header>
-<a href="/" title="Vinotrip">
-        <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-    </a>
-</header>
+<header> 
+<a href="/"><img id="logoSlogan" src="images/logo + slogan vinotrip.PNG"></a>
+        <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+       @guest <button id="loginButton" onclick="location.href='login'">Se Connecter</button>
+        <button id="registerButton" onclick="location.href='register'">S'inscrire</button> @endguest
+        @auth <button id="registerButton" onclick="location.href='logout'">Se déconnecter</button> @endauth
+    </header>
+<h1 id="titrePage">ROUTE DES VINS</h1>
 
 <body> 
-    <h1>Route des Vins</h1>
-    <img id="carte" src="images/carte.png">
-    <?php for ($i = 1; $i<count($route_des_vins)-1; $i++) {?>
-    <img class="localisation" onclick="uneRoute()"  id="localisation_{{$i}}" src="images/localisation.png">
-        <!-- <div class="parent"><div class = "container" ><img src="{{$route_des_vins[$i]['url_photo_route_des_vins']}}" alt="" class="image"><div class = "overlay"><div class = "texte">{{$route_des_vins[$i]['libelle_route_des_vins']}}<br>{{$route_des_vins[$i]['description_route_des_vins']}}</div></div></div></div> -->
-    <!-- </div> -->
-    <?php } ?>
+
+    <div class="map">
+        <img id="carte" src="images/carte.png">   
+        <div id="laRoute">
+        <h1 id="title"></h1>
+        <a href=""><img src="" alt="" onclick="" id="imageRoute"></a>
+        <p id="descriptionRoute"></p>
+    </div>
+    </div>
+    
 </body>
-<script src="js/SpawnRoute.js">var routes = <?php echo json_encode($route_des_vins)?>;</script>
+<script>
+var routes = <?php echo json_encode($route_des_vins);?>;
+</script>
+<script src="js/SpawnRoute.js">></script>
+
 </html>
