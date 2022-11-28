@@ -7,6 +7,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<header> 
+        <div id="headerButton">
+            <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+            <a href="/" title="Vinotrip">
+                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+            </a>
+            <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
+        </div>
+    </header>
 <body> 
 <div>
 <img src="{{$sejour[$_SERVER['QUERY_STRING']-1]['photo_sejour']}}" alt="">
