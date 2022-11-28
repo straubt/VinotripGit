@@ -13,12 +13,14 @@
     <link rel="icon" type="image/x-icon" href="images/images.jpg">
 </head>
 <header> 
-<a href="/" title="Vinotrip">
-    <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-</a>
-    <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
-    <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
-    </header><br><br><br><br>
+        <div id="headerButton">
+            <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+            <a href="/" title="Vinotrip">
+                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+            </a>
+            <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
+        </div>
+    </header>
 <body> 
 <form method="get">
     <label for="selector" id="marge"></label>

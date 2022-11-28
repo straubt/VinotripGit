@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="css/styleGeneral.css" >
     <link rel="stylesheet" href="css/over_image.css">
 </head>
-<header>
-    <a href="http://51.83.36.122:8232/" title="Vinotrip">
-        <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-    </a>
-</header>
+<header> 
+        <div id="headerButton">
+            <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+            <a href="/" title="Vinotrip">
+                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+            </a>
+            <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
+        </div>
+    </header>
 
 <body> 
     @foreach ($route_des_vins as $uneRoute)

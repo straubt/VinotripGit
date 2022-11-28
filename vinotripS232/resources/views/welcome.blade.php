@@ -15,11 +15,13 @@
         var data = <?php echo json_encode($sejour);?>;
     </script>
     <header> 
-        <a href="/" title="Vinotrip">
-            <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-        </a>
-        <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
-        <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
+        <div id="headerButton">
+            <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+            <a href="/" title="Vinotrip">
+                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+            </a>
+            <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
+        </div>
     </header>
 
     <div id="slider">
@@ -64,7 +66,7 @@
         <a href="" title="page d'accueil">
             Page d'Acceuil
         </a>
-        <a href="../mention legales/mention legales.html" title="Mentions legales">
+        <a href="" title="Mentions legales">
             Mentions legales
         </a>
         <a href="" title="Politique de Confidentialité">
