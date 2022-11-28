@@ -25,12 +25,12 @@
     </header>
 
     <div id="slider">
-            <ul id="slideWrap">
-            </ul>
-            <a id="prev" href="#">&#8810;</a>
-            <a id="next" href="#">&#8811;</a>
-            <button id="buttonSlider" onclick="location.href='nos-sejours'">Découvrir nos séjours</button>
-        </div>
+        <ul id="slideWrap">
+        </ul>
+        <a id="prev" href="#">&#8810;</a>
+        <a id="next" href="#">&#8811;</a>
+        <button id="buttonSlider" onclick="location.href='nos-sejours'">Découvrir nos séjours</button>
+    </div>
         
 
         <section class="bandeau"> 
