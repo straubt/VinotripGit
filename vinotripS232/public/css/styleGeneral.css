@@ -62,26 +62,29 @@ a {
 
 /* pour le logo et ... */
 header {
-    position: relative;
     width: 100%;
-    top: 0%;
     height: 75px;
     text-transform: uppercase;
     background-color: whitesmoke;
 }
 
-#logoSlogan{
+#headerButton{
+
     display: flex;
-    justify-content: center;
-    margin: auto;
+    justify-content: space-around;
+    position: inherit;
+    top:30%;
 }
 
-#registerButton{
-    top: 10%;
-    right: 1%;
-    position: absolute;
+
+#logoSlogan{
+    margin-top: 0%;
+}
+
+#registerButton{ 
+    margin-top: 20px;
     width: 150px;
-    height: 25px;
+    height: 35px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -91,7 +94,7 @@ header {
     border: none;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease   0s;
+    transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
 }
@@ -135,12 +138,11 @@ header {
     transform: translateY(-1px);
   }
 
-  #route_des_vins{
-    top: 10%;
-    right: 30%;
-    position: absolute  ;
+
+#route_des_vins{
+    margin-top: 20px;
     width: 150px;
-    height: 25px;
+    height: 35px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -200,3 +202,4 @@ footer {
     width: 3%;
     height: auto;
 }
+

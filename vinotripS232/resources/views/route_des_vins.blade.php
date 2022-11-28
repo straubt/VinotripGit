@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/carte.css">
 </head>
 <header> 
+
 <a href="/"><img id="logoSlogan" src="images/logo + slogan vinotrip.PNG"></a>
         <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
        @guest <button id="loginButton" onclick="location.href='login'">Se Connecter</button>
