@@ -9,18 +9,24 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
     <link rel="stylesheet" href="css/styleGeneral.css"></head>
 <body>
-<header>
-    <a href="/" title="Vinotrip">
-        <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-    </a>
-</header>
 
-    <!-- Body -->
+
+<header> 
+        <div id="headerButton">
+            <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+            <a href="/" title="Vinotrip">
+                <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
+            </a>
+            <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
+        </div>
+</header>
+    <!-- Body of Form starts -->
+
   	<div class="container">
       <form method="post" autocomplete="on">
         <!--First name-->
     		<div class="box">
-          <label for="firstName" class="fl fontLabel"> Nom : </label>
+          <label for="firstName" class="fl fontLabel"> ffv : </label>
     			<div class="new iconBox">
             <i class="fa fa-user" aria-hidden="true"></i>
           </div>

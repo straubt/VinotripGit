@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil vinotrip Jerem</title>
+    <title>Accueil vinotrip Main</title>
     <link rel="icon" type="image/x-icon" href="images/images.jpg">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
     <link rel="stylesheet" href="css/styleGeneral.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/caroussel.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <script>
-        var data = <?php echo json_encode($sejour);?>;
+        var data = <?php echo json_encode($sejour);?>
     </script>
     <header> 
-        <img id="logoSlogan" src="images/logo + slogan vinotrip.PNG">
-        <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
-        <button id="registerButton" onclick="location.href='register'">S'inscrire</button>
-    </header>
 
-    <div id="slider">
-            <ul id="slideWrap">
-            </ul>
-            <a id="prev" href="#">&#8810;</a>
-            <a id="next" href="#">&#8811;</a>
-        </div>
-        <button id="buttonSlider" onclick="location.href='nos-sejours'">Découvrir nos séjours</button>
-        <br>
+    <a href="/"><img id="logoPanier" src="images/panier.png"></a>
+    <a href="/"><img id="logoSlogan" src="images/logo + slogan vinotrip.PNG"></a>
+        <button id="route_des_vins" onclick="location.href='route-des-vins'">Route des vins</button>
+       @guest <button id="loginButton" onclick="location.href='login'">Se Connecter</button>
+        <button id="registerButton" onclick="location.href='register'">S'inscrire</button> @endguest
+        @auth <button id="loginButton" onclick="location.href='profile'">Mon profil</button>
+         <button id="registerButton" onclick="location.href='logout'">Se déconnecter</button> @endauth
+    </header>   
+
+
+    <div class="owl-carousel">
+    </div>
+        
 
         <section class="bandeau"> 
             <br>
@@ -59,21 +62,22 @@
 </body>
 
 <footer>
-        <div class="txtFooter">
-            <a href="" title="page d'accueil">
-                Page d'Acceuil
-            </a>
-            <a href="../mention legales/mention legales.html" title="Mentions legales">
-                Mentions legales
-            </a>
-            <a href="" title="Politique de Confidentialité">
-                Politique de Confidentialité
-            </a>
-        </div>
-        
-        <div id="txtPayementSecu">Payement securisé :
-            <br><img id="payementSecu" src="images/Paiement-Securise.png" title="Paiement sécurisé">
-        </div>
+    <div class="txtFooter">
+        <a href="" title="page d'accueil">
+            Page d'Acceuil
+        </a>
+        <a href="" title="Mentions legales">
+            Mentions legales
+        </a>
+        <a href="" title="Politique de Confidentialité">
+            Politique de Confidentialité
+        </a>
+    </div>
+    <div id="txtPayementSecu">Payement securisé :
+        <br><img id="payementSecu" src="images/Paiement-Securise.png" title="Paiement sécurisé">
+    </div>
+    <script src="js/jquery-3.6.1.slim.min.js"></script>
+    <script src="js/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/caroussel.js"></script>
 </footer>
-<script src="js/caroussel.js"></script>
 </html>

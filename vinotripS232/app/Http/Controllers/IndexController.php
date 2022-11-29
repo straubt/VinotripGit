@@ -12,6 +12,7 @@ use App\Models\Categorie_Participant;
 use App\Models\Theme;
 use App\Models\Route_des_vins;
 use App\Models\Avis;
+use App\Models\Sejour_To_Cat_Participant;
 
 
 
@@ -23,7 +24,7 @@ class IndexController extends Controller
     }
 
     public function sejour(){
-        return view("lessejours", ["sejour" => Sejour::all(), "destination" => Destination::all(),"categorie_participant" => Categorie_Participant::all(),"theme" => Theme::all()]);
+        return view("lessejours", ["sejour" => Sejour::all(), "destination" => Destination::all(),"categorie_participant" => Categorie_Participant::all(),"theme" => Theme::all(), "sejour_to_cat_participant" => Sejour_To_Cat_Participant::all()]);
     }
 
     public function unSejour(){
@@ -38,9 +39,6 @@ class IndexController extends Controller
         return view("route_des_vins", ["route_des_vins" => Route_des_vins::all()]);
     }
 
-    public function register(){
-        return view("register");
-    }
 
     // public function destination(){
     //     return view("sejour", ["destination" => Destination::all()]);
