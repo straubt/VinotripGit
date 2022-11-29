@@ -1,0 +1,14 @@
+.sejourHeader{
+    display: flex;
+    flex-direction: row;
+}
+
+.sejourHeaderText{
+    background: #7E0000DE;
+    color: white;
+}
+
+.sejourHeaderText h1{
+    color: white;
+    text-decoration: none;
+}
